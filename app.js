@@ -8,9 +8,11 @@ let listaDeAmigos =[];
         alert ('Digite um nome válido!')
       }
        else {
-        listaDeAmigos.push(campoDeTexto);
-        let mostrarLista= document.getElementById('listaAmigos');
-        mostrarLista.innerHTML=listaDeAmigos;
+         listaDeAmigos.push(campoDeTexto);
+         let mostrarLista= document.getElementById('listaAmigos');
+         const listItem = document.createElement('li')
+         listItem.innerHTML = campoDeTexto
+          mostrarLista.appendChild(listItem)
     }
     limpaTela();
     }
